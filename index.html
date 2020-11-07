@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <title>Belma Besirevic Front End Developer</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo">Belma Besirevic</h1>
+        <nav>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <div class="dropdown">
+            <button class="dropbtn">Resume</button>
+            <div class="dropdown-content">
+              <a href="#" class="resume-file">Resume</a>
+              <a href="#" class="resume-file">Lebenslauf</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Intro -->
+      <section class="intro">
+        <h3 id="intro-greeting">Hello 🌹</h3>
+        <p class="phrase">
+          I am a Front End Designer && Developer and && Media Student,
+        </p>
+        <input type="range" max="3" value="0" />
+      </section>
+      <!-- Projects -->
+      <main id="projects">
+        <article class="projects">
+          <h3 class="projects-title">Projects</h3>
+          <!-- btn-container -->
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="design-feed">
+              Design Feed
+            </button>
+            <!-- <button class="tab-btn" data-id="vision">Vision</button>
+            <button class="tab-btn" data-id="goals">Goals</button> -->
+          </div>
+          <div class="projects-content">
+            <!--single item-->
+            <div class="content active" id="design-feed">
+              <div class="project-1">
+                <img class="project-img" src="images/project1.png" />
+                <p class="project-description">
+                  Blog-type website with interactive reading indicator that lets
+                  users know how much pixels/reading space they are left from
+                  the top of the website/article.
+                  <a
+                    class="description-links"
+                    href="https://github.com/belmab/design-feed-website"
+                    target="_blank"
+                    >Source Code</a
+                  >
+                  <a
+                    class="description-links"
+                    href="https://design-feed-website-e95g54jb0.vercel.app/"
+                    target="_blank"
+                    >Preview</a
+                  >
+                </p>
+              </div>
+            </div>
+            <!-- end of single item -->
+          </div>
+        </article>
+      </main>
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <form method="POST" data-netlify="true">
+          <h3 class="contact-paragraph">
+            Get in touch with me, please send me an email using the contact form
+            below.
+          </h3>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" />
+            <label for="company">Company / Organisation</label>
+            <input
+              type="text"
+              name="company"
+              id="company"
+              placeholder="Company / Organisation"
+            />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+            />
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+            ></textarea>
+            <div data-netlify-recaptcha="true"></div>
+            <button type="submit">Submit</button>
+        </form>
+      </section>
+      <!-- Footer -->
+      <!-- Footer -->
+    </div>
+    <footer>
+      <div class="contact-footer">
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            focusable="false"
+            width="3rem"
+            height="3rem"
+            style="
+              -ms-transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+            "
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 1024 1024"
+          >
+            <path
+              d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5C64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9c26.4 39.1 77.9 32.5 104 26c5.7-23.5 17.9-44.5 34.7-60.8c-140.6-25.2-199.2-111-199.2-213c0-49.5 16.3-95 48.3-131.7c-20.4-60.5 1.9-112.3 4.9-120c58.1-5.2 118.5 41.6 123.2 45.3c33-8.9 70.7-13.6 112.9-13.6c42.4 0 80.2 4.9 113.5 13.9c11.3-8.6 67.3-48.8 121.3-43.9c2.9 7.7 24.7 58.3 5.5 118c32.4 36.8 48.9 82.7 48.9 132.3c0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9c177.1-59.7 304.6-227 304.6-424.1c0-247.2-200.4-447.3-447.5-447.3z"
+              fill="#353535"
+            />
+          </svg>
+        </a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="false"
+            focusable="false"
+            width="3rem"
+            height="3rem"
+            style="
+              -ms-transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+            "
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 1024 1024"
+          >
+            <path
+              d="M488.1 414.7V303.4L300.9 428l83.6 55.8zm254.1 137.7v-79.8l-59.8 39.9zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm278 533c0 1.1-.1 2.1-.2 3.1c0 .4-.1.7-.2 1a14.16 14.16 0 0 1-.8 3.2c-.2.6-.4 1.2-.6 1.7c-.2.4-.4.8-.5 1.2c-.3.5-.5 1.1-.8 1.6c-.2.4-.4.7-.7 1.1c-.3.5-.7 1-1 1.5c-.3.4-.5.7-.8 1c-.4.4-.8.9-1.2 1.3c-.3.3-.6.6-1 .9c-.4.4-.9.8-1.4 1.1c-.4.3-.7.6-1.1.8c-.1.1-.3.2-.4.3L525.2 786c-4 2.7-8.6 4-13.2 4c-4.7 0-9.3-1.4-13.3-4L244.6 616.9c-.1-.1-.3-.2-.4-.3l-1.1-.8c-.5-.4-.9-.7-1.3-1.1c-.3-.3-.6-.6-1-.9c-.4-.4-.8-.8-1.2-1.3a7 7 0 0 1-.8-1c-.4-.5-.7-1-1-1.5c-.2-.4-.5-.7-.7-1.1c-.3-.5-.6-1.1-.8-1.6c-.2-.4-.4-.8-.5-1.2c-.2-.6-.4-1.2-.6-1.7c-.1-.4-.3-.8-.4-1.2c-.2-.7-.3-1.3-.4-2c-.1-.3-.1-.7-.2-1c-.1-1-.2-2.1-.2-3.1V427.9c0-1 .1-2.1.2-3.1c.1-.3.1-.7.2-1a14.16 14.16 0 0 1 .8-3.2c.2-.6.4-1.2.6-1.7c.2-.4.4-.8.5-1.2c.2-.5.5-1.1.8-1.6c.2-.4.4-.7.7-1.1c.6-.9 1.2-1.7 1.8-2.5c.4-.4.8-.9 1.2-1.3c.3-.3.6-.6 1-.9c.4-.4.9-.8 1.3-1.1c.4-.3.7-.6 1.1-.8c.1-.1.3-.2.4-.3L498.7 239c8-5.3 18.5-5.3 26.5 0l254.1 169.1c.1.1.3.2.4.3l1.1.8l1.4 1.1c.3.3.6.6 1 .9c.4.4.8.8 1.2 1.3c.7.8 1.3 1.6 1.8 2.5c.2.4.5.7.7 1.1c.3.5.6 1 .8 1.6c.2.4.4.8.5 1.2c.2.6.4 1.2.6 1.7c.1.4.3.8.4 1.2c.2.7.3 1.3.4 2c.1.3.1.7.2 1c.1 1 .2 2.1.2 3.1V597zm-254.1 13.3v111.3L723.1 597l-83.6-55.8zM281.8 472.6v79.8l59.8-39.9zM512 456.1l-84.5 56.4l84.5 56.4l84.5-56.4zM723.1 428L535.9 303.4v111.3l103.6 69.1zM384.5 541.2L300.9 597l187.2 124.6V610.3l-103.6-69.1z"
+              fill="#353535"
+            />
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            focusable="false"
+            width="3rem"
+            height="3rem"
+            style="
+              -ms-transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+            "
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#353535"
+              d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.67 2L12 10.75L5.67 6zM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2a1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1z"
+            />
+          </svg>
+        </a>
+        <a href=""
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            focusable="false"
+            width="3rem"
+            height="3rem"
+            style="
+              -ms-transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+            "
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z"
+              fill="#353535"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <p class="copyright">Belma Besirevic &#169; 2020</p>
+    </div>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

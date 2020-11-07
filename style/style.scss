@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+//Colors
+$dark: #1d1a31;
+$green: #00c9b7;
+$pastel-green: #689dab;
+// Font
+$space-mono: "Space Mono", monospace;
+// Box Shadow
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+// Body styles
+body {
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.9rem;
+  background: linear-gradient(
+      to right bottom,
+      #f08cae,
+      #e886ac,
+      #e080a9,
+      #d87aa7,
+      #d074a5,
+      #d074a5,
+      #d074a5,
+      #d074a5,
+      #d87aa7,
+      #e080a9,
+      #e886ac,
+      #f08cae
+    )
+    no-repeat;
+}
+
+// Container
+.container {
+  height: 100%;
+}
+
+#header {
+  margin-top: 3rem;
+  text-align: center;
+  #logo {
+    font-family: $space-mono;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+  }
+}
+
+// Navigation links
+.nav-link {
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.nav-link:hover {
+  padding-bottom: 5px;
+  border-bottom: 5px solid $green;
+}
+
+// Dropdown button
+.dropbtn {
+  cursor: pointer;
+  background-color: $green;
+  color: white;
+  padding: 0.4rem;
+  border: none;
+  font-size: 0.8rem;
+  font-family: $space-mono;
+  @include box-shadow(4px 3px 5px 0px rgba(128, 128, 128, 0.75));
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $pastel-green;
+  min-width: 100px;
+  z-index: 1;
+}
+.resume-file {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+}
+.resume-file:hover {
+  background-color: $green;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: $green;
+}
+
+// Intro Section
+.intro {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 3rem 1rem;
+  h3 {
+    font-family: $space-mono;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  .phrase {
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+  input {
+    cursor: pointer;
+  }
+}
+
+// Projects
+#projects {
+  padding: 0 1rem;
+  .projects h3 {
+    font-family: $space-mono;
+    font-weight: 400;
+  }
+  // Project Tab
+  .btn-container {
+    text-align: right;
+  }
+  .tab-btn {
+    border: none;
+    padding: 0.4rem;
+    font-family: $space-mono;
+    font-size: 0.7rem;
+    @include box-shadow(4px 3px 5px 0px rgba(128, 128, 128, 0.75));
+  }
+  .tab-btn.active {
+    color: #fff;
+    background-color: $green;
+  }
+  .tab-btn:hover {
+    background-color: $green;
+  }
+  .content {
+    display: none;
+  }
+  .content.active {
+    display: block;
+  }
+  // Project Image
+  .project-img {
+    display: none;
+  }
+  @media all and (min-width: 480px) {
+    .project-img {
+      display: block;
+      margin: 3% auto;
+      width: 70vw;
+      @include box-shadow(4px 3px 5px 0px rgba(128, 128, 128, 0.75));
+    }
+  }
+
+  // Project description
+  .project-description {
+    font-size: 1rem;
+    align-self: center;
+    line-height: 1.3;
+    color: $dark;
+  }
+  .description-links {
+    font-family: $space-mono;
+    display: inline-block;
+    padding: 0.2rem;
+    text-decoration: none;
+    color: $dark;
+    cursor: pointer;
+    border-bottom: 5px solid $green;
+    font-size: 1rem;
+    margin-right: 0.3rem;
+  }
+  .description-links:hover {
+    color: #fff;
+    background-color: $green;
+  }
+}
+
+// Contact
+.contact {
+  padding-top: 1rem;
+  color: #fff;
+  justify-content: center;
+  border-radius: 10px;
+  form {
+    text-align: center;
+    h3 {
+      margin: auto;
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 0.9rem;
+      width: 90vw;
+      font-weight: 400;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+      display: block;
+      font-size: 0.9rem;
+      font-family: $space-mono;
+    }
+    textarea {
+      height: 15vh;
+      padding: 1rem;
+      width: 75%;
+      font-size: 0.8rem;
+      line-height: 1.2;
+    }
+    & ::placeholder {
+      color: $dark;
+      opacity: 0.7;
+    }
+    button {
+      cursor: pointer;
+      background-color: $green;
+      color: white;
+      padding: 0.4rem;
+      border: none;
+      font-size: 0.8rem;
+      font-family: $space-mono;
+      letter-spacing: 2px;
+      @include box-shadow(4px 3px 5px 0px rgba(128, 128, 128, 0.75));
+      margin-top: 0.6rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+      &:hover {
+        color: $dark;
+      }
+    }
+    input {
+      width: 65%;
+      display: block;
+      font-size: 0.8rem;
+      margin: auto;
+      font-family: $space-mono;
+      text-align: left;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-image: url(../images/moon-surface.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 1rem;
+  width: 100vw;
+  height: 250px;
+  .contact-footer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1rem;
+  }
+  .contact-footer a {
+    text-decoration: none;
+    svg {
+      width: 2rem;
+    }
+    path:hover {
+      cursor: pointer;
+      fill: #fff;
+    }
+  }
+}
+
+.copyright {
+  color: $dark;
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 0.7rem;
+}
+
+// Breakpoints
+@media all and (min-width: 736px) {
+  // Header
+  #header {
+    #logo {
+      font-size: 3rem;
+    }
+    .nav-link {
+      font-size: 1.1rem;
+    }
+    .dropbtn {
+      font-size: 1.2rem;
+    }
+    .resume-file {
+      font-size: 1.1rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  //Intro
+  .intro {
+    #intro-greeting {
+      font-size: 1.8rem;
+    }
+    .phrase {
+      font-size: 1.2rem;
+    }
+  }
+
+  // Projects
+  #projects {
+    .projects-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .tab-btn {
+      font-size: 1rem;
+    }
+    .project-img {
+      width: 60vw;
+    }
+  }
+
+  #contact {
+    .contact-paragraph {
+      font-size: 1.1rem;
+    }
+    label {
+      font-size: 1.1rem;
+    }
+    input {
+      width: 40%;
+    }
+    textarea {
+      width: 50%;
+    }
+  }
+  // Footer
+  footer {
+    .contact-footer a svg {
+      width: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media all and (min-width: 980px) {
+  // Header
+  #header {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .intro {
+    width: 70vw;
+    margin: 3rem auto;
+  }
+  // Projects
+  #projects {
+    .project-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .projects-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .project-img {
+      width: 30vw;
+      margin: 0;
+    }
+    .project-description {
+      width: 40vw;
+      font-size: 1.2rem;
+    }
+  }
+  // Contact
+  #contact {
+    margin-top: 2rem;
+    .contact-paragraph {
+      width: 70vw;
+      margin: 3rem auto;
+      font-size: 1.1rem;
+    }
+    label {
+      font-size: 1.1rem;
+    }
+    input {
+      width: 350px;
+    }
+    textarea {
+      width: 500px;
+    }
+  }
+  // Footer
+  footer {
+    .contact-footer a svg {
+      width: 2.3rem;
+      margin-right: 1rem;
+    }
+  }
+}
