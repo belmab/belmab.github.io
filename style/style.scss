@@ -159,6 +159,7 @@ nav {
     padding: 0.4rem;
     font-family: $space-mono;
     font-size: 0.7rem;
+    margin-top: 10px;
     @include box-shadow(4px 3px 5px 0px rgba(128, 128, 128, 0.75));
   }
   .tab-btn.active {
